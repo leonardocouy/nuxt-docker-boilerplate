@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: .
+    command: yarn dev
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - .:/app:cached
+    ports:
+      - "8080:3000"
